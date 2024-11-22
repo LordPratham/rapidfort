@@ -4,9 +4,13 @@ from docx import Document
 from reportlab.pdfgen import canvas
 from PyPDF2 import PdfReader, PdfWriter
 from fpdf import FPDF
+from flask_cors import CORS
+
+
 
 
 app = Flask(__name__)
+CORS(app)
 UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
