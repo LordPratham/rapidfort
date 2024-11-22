@@ -24,4 +24,4 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t doc-to-pdf .
+          docker build -t doc-to-pdf -f $(pwd)/Dockerfile $(pwd)
